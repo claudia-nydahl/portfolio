@@ -1,0 +1,4 @@
+# exclude _FILES folder
+_FILES/
+index.html
+.DS_Store
