@@ -27,7 +27,7 @@
 	<link rel="icon" type="image/png" href="img/logo.png">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body onload = "preload()">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWBKV35"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -37,17 +37,11 @@
 
 	<main>
 		<section class="col-dk-12 home-banner">
-			<div class="animated-image">
-				<img class="image-animation-base" src="img/banner/iMac.jpg">
-				<img class="image-animation-image image-1" data-aos="fade-down" data-aos-delay="300" src="img/banner/Desktop.png">
-				<img class="image-animation-image image-2" data-aos="fade-down" data-aos-delay="600" src="img/banner/Popup-1.png">
-				<img class="image-animation-image image-3" data-aos="fade-down" data-aos-delay="900" src="img/banner/Popup-2.png">
-				<img class="image-animation-image image-4" data-aos="fade-down" data-aos-delay="1200" src="img/banner/Mobile.png">
-				<img class="image-animation-image image-5" data-aos="fade-down" data-aos-delay="1500" src="img/banner/Popup-3.png">
-			</div>
 			<div class="banner-title">
-				<h1>Web designer</h1>
-				<p>UI and development</p>
+				<h1>
+					<span data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000">Design &</span><br>
+					<span data-aos="fade-right" data-aos-delay="600" data-aos-duration="2000">development</span>
+				</h1>
 				<a class="button" href="/portfolio">View portfolio</a>
 			</div>
 		</section>
@@ -55,10 +49,10 @@
 		<section class="contain"> 
 			<section class="col-dk-12 about-section">				
 				<section class="content-section">
-					<h3 data-aos="fade-down">About me</h3>
+					<!-- <h3 data-aos="fade-down">About me</h3> -->
 					<p>I am a web designer and frontend developer based in Cape Town, South Africa, creating interactive digital experiences. I have a particular taste for minimal, elegant and clean aesthetics, although I work within a range of different styles. I believe that good design can aid the function of a digital product and have a great impact in communicating a strong and meaningful message.</p>
 					<br>
-					<a href="/contact" class="secondary-button">Get in touch</a>
+					<a href="/contact" class="secondary-button" data-aos="fade-down">Get in touch</a>
 				</section>
 			</section>
 
@@ -75,7 +69,7 @@
 						<div class="skill-icon-container">
 							<svg class="skill-icon creative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.54 131.34"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><polygon class="cls-1" points="48.87 130.84 80.11 0.5 99.25 0.5 68.35 130.84 48.87 130.84"/><polygon class="cls-1" points="98.67 43.54 122.2 68.96 98.67 94.5 123.33 94.5 146.86 69.02 122.77 43.54 98.67 43.54"/><polygon class="cls-1" points="48.87 43.54 25.34 68.96 48.87 94.5 24.21 94.5 0.68 69.02 24.77 43.54 48.87 43.54"/></svg>
 						</div>
-						<h2>Web Design</h2>
+						<h2>Web Design & Development</h2>
 					</div>
 					<div class="one-third" onclick="window.location = '/portfolio';">
 						<div class="skill-icon-container">

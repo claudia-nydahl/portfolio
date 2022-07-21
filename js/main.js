@@ -17,6 +17,21 @@ AOS.init({
 	duration: 1500
 });
 
+// Preload images
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+preload(
+    "../img/banner/imac-2.jpg",
+    "../img/banner/imac-3.jpg",
+    "../img/banner/imac-4.jpg",
+	"../img/banner/imac-5.jpg"
+)
+
 // Show and hide differenet portfolio categories, change focus states on menu items
 $('.all-btn').click(function() {
 	$('.category-1').fadeIn();

@@ -1,6 +1,7 @@
 @import url("vendor/reset.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 @import url("../icons/css/font-awesome.min.css");
 @import url("aos.css"); /* animate on scroll */
 @import 'variables.scss';
@@ -507,63 +508,53 @@ textarea {
 /* home page */
 
 .home-banner {
-	// background-image: url('../img/home-banner.jpg');
-	height: 95vh;
-	padding: 0 90px 0 0;
+	background-image: url('../img/banner/imac-1.jpg');
+	animation: changeBg 4s;
+	animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding: 120px 0 120px 0;
+	height: 85vh;
   	background-color: #cfd9db;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
-	h1 {
-		font-size: 4.5em;
-		margin-left: 0px;
+	.banner-title {
+		width: 70%;
+		z-index: 10;
+		padding-top: 56px;
+		text-align: center;
+		h1 {
+			font-size: 4.5em;
+			margin-left: 0px;
+			margin-bottom: 30px;
+		}
+		span {
+			background-color: #cfd9db;
+			padding: 0 10px;
+			line-height: 1.2;
+		}
+		span:nth-of-type(1) { 
+			font-weight: 300;
+			z-index: 10;
+		}
+		span:nth-of-type(2) {
+			font-weight: 700;
+		}
 	}
-	p {
-		font-size: 1.5rem;
-		margin-top: 8px;
-		margin-bottom: 35px;
-	}
-}
-.animated-image {
-    width: auto;
-	height: 100%;
-    background-color: #cfd9db;
-	position: relative;
-	.image-animation-base {
-		height: 100%;
-		width: auto;
-		position:absolute;
-		top:0;
-		left: 0;
-		bottom:0;
-		z-index: 0;
-	}
-	.image-animation-image {
-		height: 100%;
-		width: auto;
-		display: block;
-		position:absolute;
-		top:0;
-		left: 0;
-		z-index: 1;
-	}
-	.image-animation-image.image-2 {
-		z-index: 2;
-	}
-	.image-animation-image.image-3 {
-		z-index: 3;
-	}
-	.image-animation-image.image-4 {
-		z-index: 4;
-	}
-	.image-animation-image.image-5 {
-		z-index: 5;
+	@media screen and (min-width:768px) and (max-width: 1200px) {
+		.banner-title {
+			width: 56%;
+		}
 	}
 }
-.banner-title {
-	width: 100%;
-	max-width: 320px;
-	z-index: 10;
+@keyframes changeBg {
+	0%,100% {background-image: url('../img/banner/imac-1.jpg');}
+	20% {background-image: url('../img/banner/imac-2.jpg');}
+	40% {background-image: url('../img/banner/imac-3.jpg');}
+	60% {background-image: url('../img/banner/imac-4.jpg');}
+	80% {background-image: url('../img/banner/imac-5.jpg');}
 }
 .content-section {
 	h1, h3 {
@@ -579,9 +570,12 @@ textarea {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 140px 90px;
+	padding: 80px 90px 80px;
 	.content-section {
 		max-width: 800px;
+		p {
+			margin-top: 0;
+		}
 	}
 }
 .skills-section {
@@ -1219,28 +1213,17 @@ textarea {
 	.home-banner {
 		padding: 0;
 		padding-top: 60px;
-		height: 85vh;
+		height: 70vh;
 		flex-direction: column;
-		.animated-image {
-			width: 100%;
-			height: auto;
-			flex-grow: 2;
-			.image-animation-base {
-				width: 100%;
-				height: auto;
-			}
-			.image-animation-image {
-				width: 100%;
-				height: auto;
-			}
-		}
+		background-position: left 40px;
 		.banner-title {
+			width: 100%;
 			padding: 0 20px;
 			padding-bottom: 65px;
 			margin-top: 0;
 			text-align: center;
 			h1 {
-				font-size: 3rem;
+				font-size: 2.5rem;
 			}
 			p {
 				margin-top: 12px;
@@ -1415,6 +1398,11 @@ textarea {
 	}
 }
 
+/* homepage banner extra responsive styles */
+@media screen and (min-width:451px) and (max-width:767px) {
+	.home-banner { background-position: top left; }
+}
+
 /* tablet */ 
 @media screen and (min-width:768px) and (max-width:1024px) {
 	.logo {
@@ -1433,7 +1421,13 @@ textarea {
 		}
 	}
 	.home-banner {
-		padding: 0 120px;
+		padding: 60px 0;
+		align-items: flex-end;
+		min-height: 700px;
+		max-height: 850px;
+		.banner-title {
+			width: 100%;
+		}
 	}
 	.about-section {
 		padding: 140px 40px 20px;
